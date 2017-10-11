@@ -48,8 +48,8 @@
         }).addTo(map);
         $.when(
             $.getJSON('data/city-limits.json'),
-            $.getJSON('data/neighborhoods.json'),
-            $.getJSON('data/transit-routes.json'),
+            $.getJSON('data/neighborhoods-filtered3.json'),
+            $.getJSON('data/transit-routes-simplify.json'),
             $.getJSON('data/atlanta-urban.json')
         ).done(function(cityLimitsData, neighborhoodsData, transitRoutesData, urbanAreasData) {
             L.geoJson(cityLimitsData).addTo(map);
